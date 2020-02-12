@@ -1,0 +1,11 @@
+version: "3"
+services:
+  aws-cli:
+    image: jupitercl/aws-cli
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - AWS_ACCESS_KEY_ID=access
+      - AWS_REGION_NAME=region
+      - AWS_SECRET_ACCESS_KEY=secret
